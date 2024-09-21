@@ -3,6 +3,7 @@ import { LoginComponent } from './pages/login/login.component';
 import { LayoutComponent } from './pages/layout/layout.component';
 import { DashboardComponent } from './pages/dashboard/dashboard.component';
 import { EmployeeComponent } from './pages/employee/employee.component';
+import { SubMenuLayoutComponent } from './pages/sub-menu-layout/sub-menu-layout.component';
 
 export const routes: Routes = [
     {
@@ -16,7 +17,7 @@ export const routes: Routes = [
     }, 
     {
         path:'',
-        component:LayoutComponent,
+        component:SubMenuLayoutComponent,
         children:[
             {
                 path:'dashboard',
