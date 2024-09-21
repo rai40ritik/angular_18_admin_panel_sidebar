@@ -10,4 +10,7 @@ import { RouterOutlet } from '@angular/router';
 })
 export class AppComponent {
   title = 'angular_18_admin_panel_sidebar';
+  constructor() {
+    debugger;
+  }
 }
