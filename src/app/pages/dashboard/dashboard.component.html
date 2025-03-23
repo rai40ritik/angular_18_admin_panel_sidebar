@@ -1,140 +1,188 @@
-<div class="row pt-3 ml-2">
-    <div class="col-3">
-        <div class="card shadow bg-warning border-0">
-            <div class="card-body">
-                <div class="row">
-                    <div class="col">
-                        <span class="h6 font-semibold text-muted text-sm d-block mb-2">Budget</span>
-                        <span class="h3 font-bold mb-0">$750.90</span>
-                    </div>
-                    <div class="col-auto">
-                        <div class="icon icon-shape bg-tertiary text-white text-lg rounded-circle">
-                            <i class="bi bi-credit-card"></i>
-                        </div>
-                    </div>
+<section class="container mt-4">
+    <h2 class="text-center">CRM Dashboard</h2>
+
+    <!-- Question Paper Form -->
+    <div class="card mt-4 p-4 shadow-sm">
+        <h4 class="mb-3">Add Question Paper</h4>
+        <div class="row g-3 row-cols-1 row-cols-md-3">
+            <div class="col">
+                <div class="form-floating">
+                    <input type="text" class="form-control" placeholder="Enter department"
+                        [(ngModel)]="questionPaper.department">
+                    <label>Department</label>
                 </div>
-                <div class="mt-2 mb-0 text-sm">
-                    <span class="badge badge-pill bg-soft-success text-success me-2">
-                        <i class="bi bi-arrow-up me-1"></i>13%
-                    </span>
-                    <span class="text-nowrap text-xs text-muted">Since last month</span>
+            </div>
+            <div class="col">
+                <div class="form-floating">
+                    <input type="text" class="form-control" placeholder="Enter semester"
+                        [(ngModel)]="questionPaper.semester">
+                    <label>Semester</label>
+                </div>
+            </div>
+            <div class="col">
+                <div class="form-floating">
+                    <input type="text" class="form-control" placeholder="Enter filename"
+                        [(ngModel)]="questionPaper.filename">
+                    <label>Filename</label>
+                </div>
+            </div>
+            <div class="col">
+                <div class="form-floating">
+                    <input type="text" class="form-control" placeholder="Enter file URL"
+                        [(ngModel)]="questionPaper.file_url">
+                    <label>File URL</label>
+                </div>
+            </div>
+            <div class="col">
+                <div class="form-floating">
+                    <input type="text" class="form-control" placeholder="Enter image URL"
+                        [(ngModel)]="questionPaper.img_url">
+                    <label>Image URL</label>
                 </div>
             </div>
         </div>
+        <button class="btn btn-primary mt-3 w-100 w-md-auto" (click)="addQuestionPaper()">Submit</button>
     </div>
-    <div class="col-3">
-        <div class="card shadow bg-warning border-0">
-            <div class="card-body">
-                <div class="row">
-                    <div class="col">
-                        <span class="h6 font-semibold text-muted text-sm d-block mb-2">Budget</span>
-                        <span class="h3 font-bold mb-0">$750.90</span>
-                    </div>
-                    <div class="col-auto">
-                        <div class="icon icon-shape bg-tertiary text-white text-lg rounded-circle">
-                            <i class="bi bi-credit-card"></i>
-                        </div>
-                    </div>
+
+    <!-- Quantum Book Forms -->
+    <div class="card mt-4 p-4 shadow-sm">
+        <h4 class="mb-3">Add First Year Quantum Book</h4>
+        <div class="row g-3 row-cols-1 row-cols-md-2">
+            <div class="col">
+                <div class="form-floating">
+                    <input type="text" class="form-control" placeholder="Enter Title"
+                        [(ngModel)]="quantumBook1.title">
+                    <label>Title</label>
                 </div>
-                <div class="mt-2 mb-0 text-sm">
-                    <span class="badge badge-pill bg-soft-success text-success me-2">
-                        <i class="bi bi-arrow-up me-1"></i>13%
-                    </span>
-                    <span class="text-nowrap text-xs text-muted">Since last month</span>
+            </div>
+            <div class="col">
+                <div class="form-floating">
+                    <input type="text" class="form-control" placeholder="Enter Description"
+                        [(ngModel)]="quantumBook1.description">
+                    <label>Description</label>
+                </div>
+            </div>
+            <div class="col">
+                <div class="form-floating">
+                    <input type="text" class="form-control" placeholder="Enter Image URL"
+                        [(ngModel)]="quantumBook1.image">
+                    <label>Image URL</label>
+                </div>
+            </div>
+            <div class="col">
+                <div class="form-floating">
+                    <input type="text" class="form-control" placeholder="Enter Download Link"
+                        [(ngModel)]="quantumBook1.download_link">
+                    <label>Download Link</label>
                 </div>
             </div>
         </div>
+        <button class="btn btn-success mt-3 w-100 w-md-auto" (click)="addQuantumBook1Year()">Submit</button>
     </div>
-    <div class="col-3">
-        <div class="card shadow bg-warning  border-0">
-            <div class="card-body">
-                <div class="row">
-                    <div class="col">
-                        <span class="h6 font-semibold text-muted text-sm d-block mb-2">Budget</span>
-                        <span class="h3 font-bold mb-0">$750.90</span>
-                    </div>
-                    <div class="col-auto">
-                        <div class="icon icon-shape bg-tertiary text-white text-lg rounded-circle">
-                            <i class="bi bi-credit-card"></i>
-                        </div>
-                    </div>
+
+    <div class="card mt-4 p-4 shadow-sm">
+        <h4 class="mb-3">Add Second Year Quantum Book</h4>
+        <div class="row g-3 row-cols-1 row-cols-md-2">
+            <div class="col">
+                <div class="form-floating">
+                    <input type="text" class="form-control" placeholder="Enter Title"
+                        [(ngModel)]="quantumBook2.title">
+                    <label>Title</label>
                 </div>
-                <div class="mt-2 mb-0 text-sm">
-                    <span class="badge badge-pill bg-soft-success text-success me-2">
-                        <i class="bi bi-arrow-up me-1"></i>13%
-                    </span>
-                    <span class="text-nowrap text-xs text-muted">Since last month</span>
+            </div>
+            <div class="col">
+                <div class="form-floating">
+                    <input type="text" class="form-control" placeholder="Enter Description"
+                        [(ngModel)]="quantumBook2.description">
+                    <label>Description</label>
+                </div>
+            </div>
+            <div class="col">
+                <div class="form-floating">
+                    <input type="text" class="form-control" placeholder="Enter Image URL"
+                        [(ngModel)]="quantumBook2.image">
+                    <label>Image URL</label>
+                </div>
+            </div>
+            <div class="col">
+                <div class="form-floating">
+                    <input type="text" class="form-control" placeholder="Enter Download Link"
+                        [(ngModel)]="quantumBook2.download_link">
+                    <label>Download Link</label>
                 </div>
             </div>
         </div>
+        <button class="btn btn-success mt-3 w-100 w-md-auto" (click)="addQuantumBook2Year()">Submit</button>
     </div>
-    <div class="col-3">
-        <div class="card shadow bg-warning  border-0">
-            <div class="card-body">
-                <div class="row">
-                    <div class="col">
-                        <span class="h6 font-semibold text-muted text-sm d-block mb-2">Budget</span>
-                        <span class="h3 font-bold mb-0">$750.90</span>
-                    </div>
-                    <div class="col-auto">
-                        <div class="icon icon-shape bg-tertiary text-white text-lg rounded-circle">
-                            <i class="bi bi-credit-card"></i>
-                        </div>
-                    </div>
+
+    <div class="card mt-4 p-4 shadow-sm">
+        <h4 class="mb-3">Add Third Year Quantum Book</h4>
+        <div class="row g-3 row-cols-1 row-cols-md-2">
+            <div class="col">
+                <div class="form-floating">
+                    <input type="text" class="form-control" placeholder="Enter Title"
+                        [(ngModel)]="quantumBook3.title">
+                    <label>Title</label>
                 </div>
-                <div class="mt-2 mb-0 text-sm">
-                    <span class="badge badge-pill bg-soft-success text-success me-2">
-                        <i class="bi bi-arrow-up me-1"></i>13%
-                    </span>
-                    <span class="text-nowrap text-xs text-muted">Since last month</span>
+            </div>
+            <div class="col">
+                <div class="form-floating">
+                    <input type="text" class="form-control" placeholder="Enter Description"
+                        [(ngModel)]="quantumBook3.description">
+                    <label>Description</label>
+                </div>
+            </div>
+            <div class="col">
+                <div class="form-floating">
+                    <input type="text" class="form-control" placeholder="Enter Image URL"
+                        [(ngModel)]="quantumBook3.image">
+                    <label>Image URL</label>
+                </div>
+            </div>
+            <div class="col">
+                <div class="form-floating">
+                    <input type="text" class="form-control" placeholder="Enter Download Link"
+                        [(ngModel)]="quantumBook3.download_link">
+                    <label>Download Link</label>
                 </div>
             </div>
         </div>
+        <button class="btn btn-success mt-3 w-100 w-md-auto" (click)="addQuantumBook3Year()">Submit</button>
     </div>
-    <div class="col-6 pt-2"> 
-        <div class="card shadow bg-secondary  border-0">
-            <div class="card-body">
-                <div class="row">
-                    <div class="col">
-                        <span class="h6 font-semibold text-muted text-sm d-block mb-2">Budget</span>
-                        <span class="h3 font-bold mb-0">$750.90</span>
-                    </div>
-                    <div class="col-auto">
-                        <div class="icon icon-shape bg-tertiary text-white text-lg rounded-circle">
-                            <i class="bi bi-credit-card"></i>
-                        </div>
-                    </div>
+
+    <div class="card mt-4 p-4 shadow-sm">
+        <h4 class="mb-3">Add Fourth Year Quantum Book</h4>
+        <div class="row g-3 row-cols-1 row-cols-md-2">
+            <div class="col">
+                <div class="form-floating">
+                    <input type="text" class="form-control" placeholder="Enter Title"
+                        [(ngModel)]="quantumBook4.title">
+                    <label>Title</label>
                 </div>
-                <div class="mt-2 mb-0 text-sm">
-                    <span class="badge badge-pill bg-soft-success text-success me-2">
-                        <i class="bi bi-arrow-up me-1"></i>13%
-                    </span>
-                    <span class="text-nowrap text-xs text-muted">Since last month</span>
+            </div>
+            <div class="col">
+                <div class="form-floating">
+                    <input type="text" class="form-control" placeholder="Enter Description"
+                        [(ngModel)]="quantumBook4.description">
+                    <label>Description</label>
+                </div>
+            </div>
+            <div class="col">
+                <div class="form-floating">
+                    <input type="text" class="form-control" placeholder="Enter Image URL"
+                        [(ngModel)]="quantumBook4.image">
+                    <label>Image URL</label>
+                </div>
+            </div>
+            <div class="col">
+                <div class="form-floating">
+                    <input type="text" class="form-control" placeholder="Enter Download Link"
+                        [(ngModel)]="quantumBook4.download_link">
+                    <label>Download Link</label>
                 </div>
             </div>
         </div>
+        <button class="btn btn-success mt-3 w-100 w-md-auto" (click)="addQuantumBook4Year()">Submit</button>
     </div>
-    <div class="col-6 pt-2"> 
-        <div class="card shadow bg-secondary  border-0">
-            <div class="card-body">
-                <div class="row">
-                    <div class="col">
-                        <span class="h6 font-semibold text-muted text-sm d-block mb-2">Budget</span>
-                        <span class="h3 font-bold mb-0">$750.90</span>
-                    </div>
-                    <div class="col-auto">
-                        <div class="icon icon-shape bg-tertiary text-white text-lg rounded-circle">
-                            <i class="bi bi-credit-card"></i>
-                        </div>
-                    </div>
-                </div>
-                <div class="mt-2 mb-0 text-sm">
-                    <span class="badge badge-pill bg-soft-success text-success me-2">
-                        <i class="bi bi-arrow-up me-1"></i>13%
-                    </span>
-                    <span class="text-nowrap text-xs text-muted">Since last month</span>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
+
+</section>

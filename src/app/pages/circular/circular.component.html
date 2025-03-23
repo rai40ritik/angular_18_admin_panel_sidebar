@@ -1,0 +1,31 @@
+<div class="container mt-5">
+    <div class="card shadow-lg p-4">
+        <h2 class="text-center mb-4 text-primary">
+            <i class="bi bi-megaphone"></i> Add Circular
+        </h2>
+
+        <div class="mb-3">
+            <label class="form-label"><i class="bi bi-building"></i> Department</label>
+            <input type="text" class="form-control" placeholder="Enter Department" [(ngModel)]="circular.department">
+        </div>
+
+        <div class="mb-3">
+            <label class="form-label"><i class="bi bi-pencil-square"></i> Title</label>
+            <input type="text" class="form-control" placeholder="Enter Title" [(ngModel)]="circular.title">
+        </div>
+
+        <div class="mb-3">
+            <label class="form-label"><i class="bi bi-card-text"></i> Description</label>
+            <textarea class="form-control" rows="3" placeholder="Enter Description" [(ngModel)]="circular.description"></textarea>
+        </div>
+
+        <div class="mb-3">
+            <label class="form-label"><i class="bi bi-link-45deg"></i> Attachment URL</label>
+            <input type="text" class="form-control" placeholder="Enter File URL" [(ngModel)]="circular.attachment_url">
+        </div>
+
+        <button class="btn btn-primary w-100" (click)="addCircular()">
+            <i class="bi bi-plus-circle"></i> Add Circular
+        </button>
+    </div>
+</div>

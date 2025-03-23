@@ -14,8 +14,7 @@ export class SubMenuLayoutComponent {
       title:'Home',
       children: [
         {  title:'Dashboard',  route:'dashboard' },
-        { title:'Analytics',  route:'dashboard'  },
-        {  title:'Marketing', route:'dashboard' }
+        { title:'Circular',  route:'circular'  }
       ]
     },
     {
@@ -25,16 +24,16 @@ export class SubMenuLayoutComponent {
         {title:'Employee List6',route:'employee' },
       ]
     },
-    {
-      title:'Master',
-      children: [
-        {title:'City',route:'new-Empl' },
-        {title:'State',route:'Emp-list' },
-        {title:'District',route:'Emp-list' },
-        {title:'Dropdpown',route:'Emp-list' },
-        {title:'Designations',route:'Emp-list' }
-      ]
-    }
+    // {
+    //   title:'Master',
+    //   children: [
+    //     {title:'City',route:'new-Empl' },
+    //     {title:'State',route:'Emp-list' },
+    //     {title:'District',route:'Emp-list' },
+    //     {title:'Dropdpown',route:'Emp-list' },
+    //     {title:'Designations',route:'Emp-list' }
+    //   ]
+    // }
   ];
   expandedMenu: string ='';
 

@@ -4,6 +4,7 @@ import { LayoutComponent } from './pages/layout/layout.component';
 import { DashboardComponent } from './pages/dashboard/dashboard.component';
 import { EmployeeComponent } from './pages/employee/employee.component';
 import { SubMenuLayoutComponent } from './pages/sub-menu-layout/sub-menu-layout.component';
+import { CircularComponent } from './pages/circular/circular.component';
 
 export const routes: Routes = [
     {
@@ -28,6 +29,11 @@ export const routes: Routes = [
                 path:'employee',
                 component: EmployeeComponent,
                 title: 'Employee'
+            },
+            {
+                path:'circular',
+                component:CircularComponent,
+                title:'Circular'
             }
         ]
     }
